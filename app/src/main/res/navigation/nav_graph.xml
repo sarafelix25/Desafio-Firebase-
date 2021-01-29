@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.digitalhouse.desafiofirebase.HomeFragment"
+        android:name="com.example.desafiofirebase.HomeFrag"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.digitalhouse.desafiofirebase.DetailFragment"
+        android:name="com.example.desafiofirebase.DetailFrag"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <argument
@@ -31,12 +31,12 @@
     </fragment>
     <fragment
         android:id="@+id/registerGameFragment"
-        android:name="com.digitalhouse.desafiofirebase.RegisterGameFragment"
+        android:name="com.example.desafiofirebase.RegisterGameFrag"
         android:label="fragment_register_game"
         tools:layout="@layout/fragment_register_game" />
     <fragment
         android:id="@+id/updateGameFragment"
-        android:name="com.digitalhouse.desafiofirebase.UpdateGameFragment"
+        android:name="com.example.desafiofirebase.UpdateGameFrag"
         android:label="UpdateGameFragment"
         tools:layout="@layout/fragment_register_game">
         <argument
