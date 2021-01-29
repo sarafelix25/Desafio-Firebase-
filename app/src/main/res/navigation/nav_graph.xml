@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.digitalhouse.desafiofirebase.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerGameFragment"
+            app:destination="@id/registerGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.digitalhouse.desafiofirebase.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="game"
+            app:argType="com.digitalhouse.desafiofirebase.Game" />
+        <action
+            android:id="@+id/action_detailFragment_to_updateGameFragment"
+            app:destination="@id/updateGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerGameFragment"
+        android:name="com.digitalhouse.desafiofirebase.RegisterGameFragment"
+        android:label="fragment_register_game"
+        tools:layout="@layout/fragment_register_game" />
+    <fragment
+        android:id="@+id/updateGameFragment"
+        android:name="com.digitalhouse.desafiofirebase.UpdateGameFragment"
+        android:label="UpdateGameFragment"
+        tools:layout="@layout/fragment_register_game">
+        <argument
+            android:name="updateGame"
+            app:argType="com.digitalhouse.desafiofirebase.Game" />
+    </fragment>
 </navigation>
